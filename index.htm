@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>HTML to PDF</title>
+   <style>
+   * {
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+   }
+
+   body {
+    margin: 0;
+    padding: 0;
+   }
+
+   h1 {
+    text-align: center;
+    margin: 40px auto;
+    font-size: 50px;
+   }
+   h2 {
+    text-align: right;
+    font-size: 36px;
+   }
+   .container-fluid {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+   }
+   .container {
+    max-width: 500px;
+    width: 50%;
+    float: left;
+    margin: 0 auto;
+    border: none;
+    padding: 20px;
+   }
+   .container1 {
+    max-width: 1000px;
+    width: 100%;
+    float: left;
+    margin: 0 auto;
+    border: none;
+    padding: 20px;
+   }
+   fieldset {
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #cccccc;
+    font-size: 16px;
+   }
+   legend {
+    margin-left: 20px;
+    font-size: 20px;
+   }
+   input {
+    width: auto;
+    margin: 10px;
+    padding: 5px;
+    font-size: 18px;
+   }
+   h3 {
+    margin: 5px 0;
+   }
+   table {
+    width: 100%;
+    margin-top: 20px;
+    border: none;
+    text-align: center;
+   }
+   table td,
+   table th {
+    padding: 5px;
+    margin: 0;
+    border: 1px solid #000000;
+   }
+   table tr td:last-child {
+    text-align: right;
+   }
+
+   ul li {
+    padding: 5px;
+    margin: 10px 0;
+   }
+  </style>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ </head>
+ <body>
+  <h1>EzviNet Technology</h1>
+  <div class="container-fluid">
+   <div class="container">
+    <div class="part1">
+     <fieldset>
+      <legend>Personal Information</legend>
+      Full Name: <input type="text" id="name" /> <br />
+
+      Your Email: <input type="text" id="email" /><br />
+      Your Mobile: <input type="text" id="mobile" /><br />
+	  Select  brands: <input type="text" id="namenamename" /><br />
+	  Your Site Name: <input type="text" id="namename" /><br />
+     </fieldset>
+    </div>
+
+    <div class="part2">
+     <fieldset>
+      <legend>Your Orders</legend>
+       Camera Analog  Bullet 2mp 20m : <input type="text" id="smosa" /> <br />
+ Camera Analog Dome  2mp  20m: <input type="text" id="kachori" /><br />
+ Camera Analog  Bullet 2mp 40m : <input type="text" id="vadapav" /><br />
+ Camera Analog  Dome 2mp 40m : <input type="text" id="d" /><br />
+ Camera Analog  Bullet 4mp 20m : <input type="text" id="e" /><br />
+ Camera Analog  Dome 4mp 20m : <input type="text" id="f" /><br />
+       Camera Analog  Bullet 4mp 40m : <input type="text" id="fz" /><br />
+ Camera Analog  Dome 4mp 40m : <input type="text" id="g" /><br />
+       Camera Analog  Bullet 8mp 20m: <input type="text" id="gz" /><br />
+ Camera Analog  Dome 8mp 20m : <input type="text" id="h" /><br />
+  Camera Analog  Bullet 8mp 40m : <input type="text" id="i" /><br /> 
+       Camera Analog  Dome 8mp 40m   : <input type="text" id="iz" /><br /> 
+ Full-Color / Color / Color Night Vision   : <input type="text" id="j" /><br />
+ Wifi 2mp camera: <input type="text" id="k" /><br />
+ DvR 4ch   8ch   12ch   16ch   32ch : <input type="text" id="l" /><br /> 
+ NvR 4ch   8ch   12ch   16ch   32ch : <input type="text" id="m" /><br /> 
+ Monitor or Tv  : <input type="text" id="n" /><br />
+Segate 1TB/2TB Hard disk  : <input type="text" id="o" /><br />
+ SMPS power supply 12V   4A / 10A: <input type="text" id="p" /><br />
+ HI-TECH 12V 2A power supply : <input type="text" id="q" /><br />
+ BNC Jack: <input type="text" id="r" /><br />
+Video Power Balun Connector : <input type="text" id="s" /><br />
+Video Power Balun Connector RJ45: <input type="text" id="t" /><br />
+DC Jack male : <input type="text" id="u" /><br />
+DC Jack female : <input type="text" id="v" /><br />
+RJ 45 Surge Protection : <input type="text" id="w" /><br /> 
+RJ 45 Jack cat5 : <input type="text" id="x" /><br />
+RJ 45 Jack cat6   : <input type="text" id="y" /><br />
+Waterproof box 80X80X50 : <input type="text" id="z" /><br />
+Waterproof box 100X100X50: <input type="text" id="aa" /> <br />
+   DVR Box 3U / 5U: <input type="text" id="bb" /><br />
+      Network Box 3U / 5U : <input type="text" id="cc" /><br />
+	   Network Hub / 
+	   POE Switch 10/100 100/1000 Mbps 8p / 10p: <input type="text" id="extra " /><br />
+	  Patch panel 24 port: <input type="text" id="extraz " /><br />
+	  RJ45 FACE PLATE : <input type="text" id="extrazz " /><br />
+	  KEYSTONE CONNECTOR RJ45 cat6: <input type="text" id="extrazzz " /><br />
+	  KEYSTONE CONNECTOR RJ45 cat5: <input type="text" id="extrazzzz " /><br />
+      Single Port Telephone RJ11 Socket Outlet Wall Plate: <input type="text" id="dd" /><br />
+Single Port Network RJ45 Socket Outlet Wall Plate : <input type="text" id="ee" /><br />
+Network Cable Cat5 (*STP / UTP ): <input type="text" id="ff" /><br />
+Network Cable Cat6 (*STP / UTP ) : <input type="text" id="gg" /><br />
+Telephone Cable  1 pair: <input type="text" id="hh" /><br />
+Telephone Cable  2 pair : <input type="text" id="ii" /><br />
+  3c2v Cable kelani 8ohom: <input type="text" id="jj" /><br />
+ Flat Twin Cable 16/0.20 : <input type="text" id="kk" /><br />
+   Sun box  : <input type="text" id="ll" /><br />
+  Shoket Outlet 13A : <input type="text" id="mm" /><br />
+  Conduit Casing 1 x 2/1 inch: <input type="text" id="nn" /><br />
+  Conduit Casing 2 x 1 inch: <input type="text" id="oo" /><br />
+ wall plug No 6: <input type="text" id="pp" /><br />
+ wall plug No 7: <input type="text" id="qq" /><br />
+  Black Flat Head Screws 1 inch: <input type="text" id="rr" /><br />
+ Black Flat Head Screws 1x4/1 inch : <input type="text" id="ss" /><br />
+ Sleeve Anchor bolt Metal 8mm : <input type="text" id="tt" /><br />
+ Sleeve Anchor bolt Metal 10mm  : <input type="text" id="uu" /><br />
+ 2.5 Erth wire : <input type="text" id="vv" /><br />
+UPS Kv650 : <input type="text" id="ww" /><br />
+
+ 
+	   
+     </fieldset>
+    </div>
+   </div>
+
+   <div class="container1">
+    <fieldset>
+     <legend>Welcome</legend>
+     <h3>My Name:<span id="name2"></span></h3>
+     <h3>Email: <span id="email2"></span></h3>
+     <h3>Mobile: <span id="mobile2"></span></h3>
+	  <h3>Brands: <span id="namename3"></span></h3>
+	 <h3>Site Name: <span id="namename2"></span></h3>
+     <table border="1">
+      <thead>
+       <tr>
+        
+        <th>Details </th>
+        <th>Quantity</th>
+         </tr>
+      </thead>
+      <tbody id="bill">
+      </tbody>
+     </table>
+    </fieldset>
+	<legend>Thanks</legend>
+    <h2>EzviNet Technologhy</span></h2>
+   </div>
+   <button style = "background-color: gray ; width;100px; height:30px;" class="download">Download PDF</button> 
+    <button style = "background-color: gray ; width;100px; height:30px;" onclick="document.location='https://ezvinet.000webhostapp.com/'"> EzviNet</button> 
+    <!-- Adding a script to listen for the button click event and to convert the HTML element to a PDF and download it -->
+    
+  </div>
+  <script>
+   var Smosa = 0,
+    Kachori = 0,
+    Vadapav = 0,
+	 d = 0,
+ e = 0,
+ f = 0,
+ fz = 0,
+ g = 0,
+ gz = 0,
+ h = 0,
+ i = 0,
+ iz = 0,
+ j = 0,
+ k = 0,
+ l = 0,
+ m = 0,
+ n = 0,
+ o = 0,
+ p = 0,
+ q = 0,
+ r = 0,
+ s = 0,
+ t = 0,
+ u = 0,
+ v = 0,
+ w = 0,
+x = 0,
+y = 0,
+z = 0,
+aa = 0,
+bb = 0,
+cc = 0,
+extra = 0,
+extraz = 0,
+extrazz = 0,
+extrazzz = 0,
+extrazzzz = 0,
+ dd = 0,
+ ee = 0,
+ ff = 0,
+ gg = 0,
+ hh = 0,
+ ii = 0,
+ jj = 0,
+ kk = 0,
+ ll = 0,
+ mm = 0,
+ nn = 0,
+ oo = 0,
+ pp = 0,
+ qq = 0,
+ rr = 0,
+ ss = 0,
+ tt = 0,
+ uu = 0,
+ vv = 0,
+ ww = 0;
+
+
+    
+  var smosa_q = 0,
+    kachori_q = 0,
+    vadapav_q = 0,
+   d_q = 0,
+ e_q = 0,
+ f_q = 0,
+ fz_q = 0,
+ g_q = 0,
+ gz_q = 0,
+ h_q = 0,
+ i_q = 0,
+ iz_q = 0,
+ j_q = 0,
+ k_q = 0,
+ l_q = 0,
+ m_q = 0,
+ n_q = 0,
+ o_q = 0,
+ p_q = 0,
+ q_q = 0,
+ r_q = 0,
+ s_q = 0,
+ t_q = 0,
+ u_q = 0,
+ v_q = 0,
+ w_q = 0,
+x_q = 0,
+y_q = 0,
+z_q = 0,
+aa_q = 0,
+bb_q = 0,
+cc_q = 0,
+extra_q = 0,
+extraz_q = 0,
+extrazz_q = 0,
+extrazzz_q = 0,
+extrazzzz_q = 0,
+ dd_q = 0,
+ ee_q = 0,
+ ff_q = 0,
+ gg_q = 0,
+ hh_q = 0,
+ ii_q = 0,
+ jj_q = 0,
+ kk_q = 0,
+ ll_q = 0,
+ mm_q = 0,
+ nn_q = 0,
+ oo_q = 0,
+ pp_q = 0,
+ qq_q = 0,
+ rr_q = 0,
+ ss_q = 0,
+ tt_q = 0,
+ uu_q = 0,
+ vv_q = 0,
+ ww_q = 0;
+
+   var name = "",
+    email = "";
+   var smosaBill = "",
+    kachoriBill = "",
+    vadapavBill = "",
+    dBill = "",
+	eBill = "",
+	fBill = "",
+	fzBill = "",
+ gBill = "",
+ gzBill = "",
+ hBill = "",
+ iBill = "",
+ izBill = "",
+ jBill = "",
+ kBill = "",
+ lBill = "",
+ mBill = "",
+  nBill = "",
+ oBill = "",
+ pBill = "",
+ qBill = "",
+ rBill = "",
+ sBill = "",
+ tBill = "",
+ uBill = "",
+ vBill = "",
+ wBill = "",
+xBill = "",
+yBill = "",
+zBill = "",
+aaBill = "",
+bbBill = "",
+ccBill = "",
+extraBill = "",
+extrazBill = "",
+extrazzBill = "",
+extrazzzBill = "",
+extrazzzzBill = "",
+ ddBill = "",
+ eeBill = "",
+ ffBill = "",
+ ggBill = "",
+ hhBill = "",
+ iiBill = "",
+ jjBill = "",
+ kkBill = "",
+ llBill = "",
+ mmBill = "",
+ nnBill = "",
+ ooBill = "",
+ ppBill = "",
+ qqBill = "",
+ rrBill = "",
+ ssBill = "",
+ ttBill = "",
+ uuBill = "",
+ vvBill = "",
+ wwBill = "";
+
+   var total_amount = 0;
+   document.getElementById("name").addEventListener("keyup", function () {
+    document.getElementById("name2").innerHTML = this.value;
+   });
+
+   document.getElementById("email").addEventListener("keyup", function () {
+    document.getElementById("email2").innerHTML = this.value;
+   });
+
+   document.getElementById("mobile").addEventListener("keyup", function () {
+    document.getElementById("mobile2").innerHTML = this.value;
+   });
+   
+   document.getElementById("namename").addEventListener("keyup", function () {
+    document.getElementById("namename2").innerHTML = this.value;
+   });
+   
+   document.getElementById("namenamename").addEventListener("keyup", function () {
+    document.getElementById("namename3").innerHTML = this.value;
+   });
+
+   document.getElementById("smosa").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     smosaBill = "";
+     smosa_q = 0;
+     showBill();
+    } else {
+     smosa_q = this.value;
+     smosaBill = "<tr><td>Camera Analog  Bullet 2mp 20m</td><td>" + smosa_q + "</td></tr>";
+     showBill();
+    }
+   });
+
+   document.getElementById("kachori").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kachoriBill = "";
+     kachori_q = 0;
+     showBill();
+    } else {
+     kachori_q = this.value;
+     kachoriBill = "<tr><td>Camera Analog Dome  2mp  20m</td><td>" + kachori_q + "</td></tr>";
+     showBill();
+    }
+   });
+
+   document.getElementById("vadapav").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vadapavBill = "";
+     vadapav_q = 0;
+     showBill();
+    } else {
+     vadapav_q = this.value;
+     vadapavBill = "<tr><td>Camera Analog  Bullet 2mp 40m</td><td>" + vadapav_q + "</td></tr>";
+     showBill();
+    }
+   });
+
+   document.getElementById("d").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     dBill = "";
+     d_q = 0;
+     showBill();
+    } else {
+     d_q = this.value;
+     dBill = "<tr><td>Camera Analog  Dome 2mp 40m</td><td>" + d_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("e").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     eBill = "";
+     e_q = 0;
+     showBill();
+    } else {
+     e_q = this.value;
+     eBill = "<tr><td>Camera Analog  Bullet 4mp 20m</td><td>" + e_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("f").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     fBill = "";
+     f_q = 0;
+     showBill();
+    } else {
+     f_q = this.value;
+     fBill = "<tr><td>Camera Analog  Dome 4mp 20m</td><td>" + f_q + " </td></tr>";
+     showBill();
+    }
+   });
+      document.getElementById("fz").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     fzBill = "";
+     fz_q = 0;
+     showBill();
+    } else {
+     fz_q = this.value;
+     fzBill = "<tr><td>Camera Analog  Bullet 4mp 40m</td><td>" + fz_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("g").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     gBill = "";
+     g_q = 0;
+     showBill();
+    } else {
+     g_q = this.value;
+     gBill = "<tr><td>Camera Analog  Dome 4mp 40m</td><td>" + g_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("gz").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     gzBill = "";
+     gz_q = 0;
+     showBill();
+    } else {
+     gz_q = this.value;
+     gzBill = "<tr><td>Camera Analog  Bullet 8mp 20m</td><td>" + gz_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("h").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     hBill = "";
+     h_q = 0;
+     showBill();
+    } else {
+     h_q = this.value;
+     hBill = "<tr><td>Camera Analog  Dome 8mp 20m</td><td>" + h_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("i").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     iBill = "";
+     i_q = 0;
+     showBill();
+    } else {
+     i_q = this.value;
+     iBill = "<tr><td>Camera Analog  Bullet 8mp 40m</td><td>" + i_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("iz").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     izBill = "";
+     iz_q = 0;
+     showBill();
+    } else {
+     iz_q = this.value;
+     izBill = "<tr><td>Camera Analog  Dome 8mp 40m</td><td>" + iz_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("j").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     jBill = "";
+     j_q = 0;
+     showBill();
+    } else {
+     j_q = this.value;
+     jBill = "<tr><td>Full-Color / Color / Color Night Vision(Hikvision)</td><td>" + j_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("k").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kBill = "";
+     k_q = 0;
+     showBill();
+    } else {
+     k_q = this.value;
+     kBill = "<tr><td>Wifi 2mp camera (Ezviz)</td><td>" + k_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("l").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     lBill = "";
+     l_q = 0;
+     showBill();
+    } else {
+     l_q = this.value;
+     lBill = "<tr><td>DvR 4ch   8ch   12ch   16ch   32ch</td><td>" + l_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("m").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     mBill = "";
+     m_q = 0;
+     showBill();
+    } else {
+     m_q = this.value;
+     mBill = "<tr><td>NvR 4ch   8ch   12ch   16ch   32ch</td><td>" + m_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("n").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     nBill = "";
+     n_q = 0;
+     showBill();
+    } else {
+     n_q = this.value;
+     nBill = "<tr><td>Monitor or Tv</td><td>" + n_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("o").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     oBill = "";
+     o_q = 0;
+     showBill();
+    } else {
+     o_q = this.value;
+     oBill = "<tr><td>Segate 1TB/2TB Hard disk</td><td>" + o_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("p").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     pBill = "";
+     p_q = 0;
+     showBill();
+    } else {
+     p_q = this.value;
+     pBill = "<tr><td>SMPS power supply with coolingfan 12V   4A / 10A</td><td>" + p_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("q").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     qBill = "";
+     q_q = 0;
+     showBill();
+    } else {
+     q_q = this.value;
+     qBill = "<tr><td>HI-TECH 12V 2A power supply</td><td>" + q_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("r").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     rBill = "";
+     r_q = 0;
+     showBill();
+    } else {
+     r_q = this.value;
+     rBill = "<tr><td>BNC Jack</td><td>" + r_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("s").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     sBill = "";
+     s_q = 0;
+     showBill();
+    } else {
+     s_q = this.value;
+     sBill = "<tr><td>Video  Balun Connector 8Mp </td><td>" + s_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("t").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     tBill = "";
+     t_q = 0;
+     showBill();
+    } else {
+     t_q = this.value;
+     tBill = "<tr><td>Video Power Balun Connector RJ45 8Mp</td><td>" + t_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("u").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     uBill = "";
+     u_q = 0;
+     showBill();
+    } else {
+     u_q = this.value;
+     uBill = "<tr><td>DC Jack male</td><td>" + u_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("v").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vBill = "";
+     v_q = 0;
+     showBill();
+    } else {
+     v_q = this.value;
+     vBill = "<tr><td>DC Jack female</td><td>" + v_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("w").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     wBill = "";
+     w_q = 0;
+     showBill();
+    } else {
+     w_q = this.value;
+     wBill = "<tr><td>RJ 45 Surge Protection</td><td>" + w_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("x").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     xBill = "";
+     x_q = 0;
+     showBill();
+    } else {
+     x_q = this.value;
+     xBill = "<tr><td>RJ 45 Jack cat5 </td><td>" + x_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("y").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     yBill = "";
+     y_q = 0;
+     showBill();
+    } else {
+     y_q = this.value;
+     yBill = "<tr><td>RJ 45 Jack cat6</td><td>" + y_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("z").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     zBill = "";
+     z_q = 0;
+     showBill();
+    } else {
+     z_q = this.value;
+     zBill = "<tr><td>Waterproof box 80 X 80 X 50</td><td>" + z_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("aa").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     aaBill = "";
+     aa_q = 0;
+     showBill();
+    } else {
+     aa_q = this.value;
+     aaBill = "<tr><td>Waterproof box 100 X 100 X 50</td><td>" + aa_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("bb").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     bbBill = "";
+     bb_q = 0;
+     showBill();
+    } else {
+     bb_q = this.value;
+     bbBill = "<tr><td> DVR Box 3U / 5U</td><td>" + bb_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("cc").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ccBill = "";
+     cc_q = 0;
+     showBill();
+    } else {
+     cc_q = this.value;
+     ccBill = "<tr><td> Network Box 3U / 5U</td><td>" + cc_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("extra ").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     extraBill = "";
+     extra_q = 0;
+     showBill();
+    } else {
+     extra_q = this.value;
+     extraBill = "<tr><td>Network Hub / POE Switch 10/100 100/1000 Mbps 8p / 10p</td><td>" + extra_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("extraz ").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     extrazBill = "";
+     extraz_q = 0;
+     showBill();
+    } else {
+     extraz_q = this.value;
+     extrazBill = "<tr><td>Patch panel 24 port</td><td>" + extraz_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("extrazz ").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     extrazzBill = "";
+     extrazz_q = 0;
+     showBill();
+    } else {
+     extrazz_q = this.value;
+     extrazzBill = "<tr><td>RJ45 FACE PLATE </td><td>" + extrazz_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("extrazzz ").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     extrazzzBill = "";
+     extrazzz_q = 0;
+     showBill();
+    } else {
+     extrazzz_q = this.value;
+     extrazzzBill = "<tr><td>KEYSTONE CONNECTOR RJ45 cat6</td><td>" + extrazzz_q + " </td></tr>";
+     showBill();
+    }
+   });
+   document.getElementById("extrazzzz ").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     extrazzzzBill = "";
+     extrazzzz_q = 0;
+     showBill();
+    } else {
+     extrazzzz_q = this.value;
+     extrazzzzBill = "<tr><td>KEYSTONE CONNECTOR RJ45 cat5</td><td>" + extrazzzz_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("dd").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ddBill = "";
+     dd_q = 0;
+     showBill();
+    } else {
+     dd_q = this.value;
+     ddBill = "<tr><td>Single Port Telephone RJ11 Socket Outlet Wall Plate</td><td>" + dd_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ee").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     eeBill = "";
+     ee_q = 0;
+     showBill();
+    } else {
+     ee_q = this.value;
+     eeBill = "<tr><td>Single Port Network RJ45 Socket Outlet Wall Plate</td><td>" + ee_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ff").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ffBill = "";
+     ff_q = 0;
+     showBill();
+    } else {
+     ff_q = this.value;
+     ffBill = "<tr><td>Network Cable Cat5 (*STP / UTP ) Dlink/Havells/orange</td><td>" + ff_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("gg").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ggBill = "";
+     gg_q = 0;
+     showBill();
+    } else {
+     gg_q = this.value;
+     ggBill = "<tr><td>Network Cable Cat6 (*STP / UTP )Dlink/Havells/orange </td><td>" + gg_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("hh").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     hhBill = "";
+     hh_q = 0;
+     showBill();
+    } else {
+     hh_q = this.value;
+     hhBill = "<tr><td>Telephone Cable  1 pair (orange/ACL)</td><td>" + hh_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ii").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     iiBill = "";
+     ii_q = 0;
+     showBill();
+    } else {
+     ii_q = this.value;
+     iiBill = "<tr><td>Telephone Cable  2 pair (orange/ACL)</td><td>" + ii_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("jj").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     jjBill = "";
+     jj_q = 0;
+     showBill();
+    } else {
+     jj_q = this.value;
+     jjBill = "<tr><td>3c2v Cable kelani 8ohom (Kelani)</td><td>" + jj_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("kk").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     kkBill = "";
+     kk_q = 0;
+     showBill();
+    } else {
+     kk_q = this.value;
+     kkBill = "<tr><td>Flat Twin Cable 16/0.20 (orange/ACL)</td><td>" + kk_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ll").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     llBill = "";
+     ll_q = 0;
+     showBill();
+    } else {
+     ll_q = this.value;
+     llBill = "<tr><td>Sun box(Polycrome)</td><td>" + ll_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("mm").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     mmBill = "";
+     mm_q = 0;
+     showBill();
+    } else {
+     mm_q = this.value;
+     mmBill = "<tr><td>Shoket Outlet 13A</td><td>" + mm_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("nn").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     nnBill = "";
+     nn_q = 0;
+     showBill();
+    } else {
+     nn_q = this.value;
+     nnBill = "<tr><td>Conduit Casing 1 x 2/1 inch(Polycrome)</td><td>" + nn_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("oo").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ooBill = "";
+     oo_q = 0;
+     showBill();
+    } else {
+     oo_q = this.value;
+     ooBill = "<tr><td>Conduit Casing 2 x 1 inch(Polycrome)</td><td>" + oo_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("pp").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ppBill = "";
+     pp_q = 0;
+     showBill();
+    } else {
+     pp_q = this.value;
+     ppBill = "<tr><td>wall plug No 6</td><td>" + pp_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("qq").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     qqBill = "";
+     qq_q = 0;
+     showBill();
+    } else {
+     qq_q = this.value;
+     qqBill = "<tr><td>wall plug No 7</td><td>" + qq_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("rr").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     rrBill = "";
+     rr_q = 0;
+     showBill();
+    } else {
+     rr_q = this.value;
+     rrBill = "<tr><td> Black Flat Head Screws 1 inch</td><td>" + rr_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ss").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ssBill = "";
+     ss_q = 0;
+     showBill();
+    } else {
+     ss_q = this.value;
+     ssBill = "<tr><td>Black Flat Head Screws 1x4/1 inch</td><td>" + ss_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("tt").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     ttBill = "";
+     tt_q = 0;
+     showBill();
+    } else {
+     tt_q = this.value;
+     ttBill = "<tr><td>Sleeve Anchor bolt Metal 8mm </td><td>" + tt_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("uu").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     uuBill = "";
+     uu_q = 0;
+     showBill();
+    } else {
+     uu_q = this.value;
+     uuBill = "<tr><td> Sleeve Anchor bolt Metal 10mm</td><td>" + uu_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("vv").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     vvBill = "";
+     vv_q = 0;
+     showBill();
+    } else {
+     vv_q = this.value;
+     vvBill = "<tr><td>2.5 Erth wire</td><td>" + vv_q + " </td></tr>";
+     showBill();
+    }
+   });
+document.getElementById("ww").addEventListener("keyup", function () {
+    if (this.value == "" || this.value == 0) {
+     wwBill = "";
+     ww_q = 0;
+     showBill();
+    } else {
+     ww_q = this.value;
+     wwBill = "<tr><td>UPS Kv650</td><td>" + ww_q + " </td></tr>";
+     showBill();
+    }
+   });
+
+   function showBill() {
+    document.getElementById("bill").innerHTML = smosaBill + kachoriBill + vadapavBill + dBill + eBill + fBill + fzBill + gBill + gzBill + hBill + iBill + izBill + jBill + kBill + lBill + mBill + nBill + oBill + pBill + qBill + rBill + sBill + tBill + uBill + vBill + wBill + xBill + yBill + zBill + aaBill + bbBill + ccBill + extraBill + extrazBill + extrazzBill + extrazzzBill + extrazzzzBill + ddBill + eeBill + ffBill + ggBill + hhBill + iiBill + jjBill + kkBill + llBill + mmBill + nnBill + ooBill + ppBill + qqBill + rrBill + ssBill + ttBill + uuBill + vvBill + wwBill;
+   <!--  document.getElementById("bill").innerHTML = smosaBill + kachoriBill + vadapavBill + dBill + eBill + fBill + gBill + hBill + iBil + jBill + kBill + lBill + mBill + nBill + oBill + pBill + qBill + rBill + sBill + tBill + uBill + vBill + wBill + xBill + yBill + zBill + aaBill + bbBill + ccBill + ddBill + eeBill + ffBill + ggBill + hhBill + iiBil + jjBill + kkBill + llBill + mmBill + nnBill + ooBill + ppBill + qqBill + rrBill + ssBill + ttBill + uuBill + vvBill + wwBill + xxBill + yyBill + zzBill+ aaaBill + bbbBill + cccBill + dddBill + eeeBill + fffBill + gggBill + hhhBill + iiiBil + jjjBill + kkkBill + lllBill + mmmBill + nnnBill + oooBill + pppBill + qqqBill + rrrBill + sssBill + tttBill + uuuBill + vvvBill + wwwBill + xxxBill + yyyBill + zzzBill + abBill + bbBill + cbBill + dbBill + ebBill + fbBill + gbBill + hbBill + ibBil + jbBill + kbBill + lbBill + mbBill + nbBill + obBill + pbBill + qbBill + rbBill + sbBill + tbBill + ubBill + vbBill + wbBill + xbBill + ybBill + zbBill + abbBill + bbbBill + cbbBill + dbbBill + ebbBill + fbbBill + gbbBill + hbbBill + ibbBil + jbbBill + kbbBill + lbbBill + mbbBill + nbbBill + obbBill + pbbBill + qbbBill + rbbBill + sbbBill + tbbBill + ubbBill + vbbBill + wbbBill + xbbBill + ybbBill + zbbBill+ aabbBill + bbbbBill + ccbbBill + ddbbBill + eebbBill + ffbbBill + ggbbBill;-->
+   <!-- document.getElementById("amount").innerHTML = Smosa * smosa_q + Kachori * kachori_q + Vadapav * vadapav_q + D * d_q; -->
+   }
+   let div = document.querySelector(".container1");
+        let btn = document.querySelector(".download");
+        btn.addEventListener('click', () => {
+            html2pdf().from(div).save()
+        })
+  </script>
+ </body>
+</html>
